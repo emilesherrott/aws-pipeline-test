@@ -1,18 +1,8 @@
 version: 0.2
 
-env:
-  variables:
-    DOCKER_BUILDKIT: 1
-  secrets-manager:
-    DOCKERHUB_USERNAME: "my-dockerhub-creds:username"
-    DOCKERHUB_PASSWORD: "my-dockerhub-creds:password"
-
 phases:
   install:
-    runtime-versions:
-      nodejs: 18
     commands:
-      - echo "Installing dependencies..."
-      - echo "DOCKERHUB_USERNAME is: $DOCKERHUB_USERNAME"
-      - echo "DOCKERHUB_PASSWORD is: $DOCKERHUB_PASSWORD"
-      - echo "something new"
+      - echo "Logging Docker credentials"
+      - echo "Username: $username"
+      - echo "Password: $password"
