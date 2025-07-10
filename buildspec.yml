@@ -13,3 +13,4 @@ phases:
       nodejs: 18
     commands:
       - echo Installing dependencies...
+      - echo something new
