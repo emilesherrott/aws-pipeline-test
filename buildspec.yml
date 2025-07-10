@@ -1,8 +1,15 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 18
+  pre_build:
     commands:
-      - echo $username
+      - echo Logging in to Docker Hub...
+      - echo $PASSWORD | docker login -u $USERNAME --password-stdin
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t $IMAGE_NAME:$IMAGE_TAG .
+  post_build:
+    commands:
+      - echo Pushing the Docker image...
+      - docker push $IMAGE_NAME:$IMAGE_TAG
