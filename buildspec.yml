@@ -13,4 +13,6 @@ phases:
       nodejs: 18
     commands:
       - echo Installing dependencies...
+      - echo "DOCKERHUB_USERNAME is: $DOCKERHUB_USERNAME"
+      - echo "DOCKERHUB_PASSWORD is: $DOCKERHUB_PASSWORD"
       - echo something new
