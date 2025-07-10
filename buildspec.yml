@@ -10,5 +10,5 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-    - echo "Using secrets from Secrets Manager"
-    - echo "Dockerhub Username: $DOCKERHUB_USERNAME"
+      - echo "Using secrets from Secrets Manager"
+      - echo "Dockerhub Username: $DOCKERHUB_USERNAME"
