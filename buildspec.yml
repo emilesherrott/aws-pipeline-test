@@ -12,4 +12,3 @@ phases:
     commands:
       - echo "Using secrets from Secrets Manager"
       - echo "Dockerhub Username: $DOCKERHUB_USERNAME"
-      # Be careful: don't echo the password in real logs!
